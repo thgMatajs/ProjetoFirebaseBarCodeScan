@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thgmobi.a2w.a2w.activity.FormularioEquipActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formulario_equip_ti_ns"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/formulario_equip_ib_scan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/formulario_equip_edt_ns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero de serie"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:id="@+id/formulario_equip_edt_tipo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Tipo do equipamento"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_ti_ns"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_ti_ns" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formulario_equip_ti_os"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/formulario_equip_edt_tipo"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_edt_tipo"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_edt_tipo">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/formulario_equip_edt_os"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero da OS" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formulario_equip_ti_tecnico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/formulario_equip_ti_os"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_ti_os"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_ti_os">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/formulario_equip_edt_tecnico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Tecnico" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/formulario_equip_ti_defeito"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/formulario_equip_ti_tecnico"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_ti_tecnico"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_ti_tecnico">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/formulario_equip_edt_defeito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Defeito" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:background="@color/color_btn_principal"
+        android:textColor="@color/color_btn_secundario"
+        android:id="@+id/formulario_equip_btn_salvar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Salvar"
+        app:layout_constraintEnd_toEndOf="@+id/formulario_equip_ti_defeito"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_ti_defeito"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_ti_defeito" />
+
+    <Button
+        android:background="@color/color_btn_secundario"
+        android:textColor="@color/color_btn_principal"
+        android:id="@+id/formulario_equip_btn_cancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Cancelar"
+        app:layout_constraintEnd_toEndOf="@+id/formulario_equip_btn_salvar"
+        app:layout_constraintStart_toStartOf="@+id/formulario_equip_btn_salvar"
+        app:layout_constraintTop_toBottomOf="@+id/formulario_equip_btn_salvar" />
+
+    <ImageButton
+        android:id="@+id/formulario_equip_ib_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/formulario_equip_ti_ns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/formulario_equip_ti_ns"
+        app:srcCompat="@drawable/ic_barcode_scan"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</android.support.constraint.ConstraintLayout>
